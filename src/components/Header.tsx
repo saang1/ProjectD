@@ -1,8 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { Car } from 'lucide-react';
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -11,6 +14,7 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,17 +24,31 @@ const Header = () => {
       setIsMobileMenuOpen(false);
     }
   };
+
   const textColorClass = isScrolled ? 'text-gray-800' : 'text-white';
   const logoTextColor = isScrolled ? 'text-gray-800' : 'text-white';
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-black/20 backdrop-blur-sm'}`}>
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-black/20 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-              
-            <div>
-              <h1 className={`font-bold text-xl ${logoTextColor}`}>LeanCars</h1>
-              
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/d9c595b3-fe94-427a-b456-19d29233d409.png" 
+                alt="Biker Detailing Logo" 
+                className={`h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 ${
+                  isScrolled 
+                    ? 'filter-none' 
+                    : 'filter brightness-110 contrast-110'
+                }`}
+              />
+            </div>
+            <div className="hidden sm:block">
+              <h1 className={`font-bold text-xl lg:text-2xl ${logoTextColor} transition-colors duration-300`}>
+                LeanCars
+              </h1>
             </div>
           </div>
 
@@ -64,7 +82,8 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-4 p-4 border border-gray-200">
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-4 p-4 border border-gray-200">
             <nav className="flex flex-col space-y-2">
               <button onClick={() => scrollToSection('inicio')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Inicio
@@ -82,8 +101,11 @@ const Header = () => {
                 Contacto
               </button>
             </nav>
-          </div>}
+          </div>
+        )}
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default Header;
