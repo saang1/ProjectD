@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Car } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,8 +35,8 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="relative">
               <img 
-                src="/lovable-uploads/d9c595b3-fe94-427a-b456-19d29233d409.png" 
-                alt="Biker Detailing Logo" 
+                src="/lovable-uploads/0963eef6-2db6-4dc0-ae62-fa3ee5cb272c.png" 
+                alt="Biker Detailing Logo - Detallado profesional de motocicletas" 
                 className={`h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 ${
                   isScrolled 
                     ? 'filter-none' 
@@ -47,7 +46,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className={`font-bold text-xl lg:text-2xl ${logoTextColor} transition-colors duration-300`}>
-                LeanCars
+                Biker Detailing
               </h1>
             </div>
           </div>
