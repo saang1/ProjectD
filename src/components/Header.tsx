@@ -25,28 +25,18 @@ const Header = () => {
   };
 
   const textColorClass = isScrolled ? 'text-gray-800' : 'text-white';
-  const logoTextColor = isScrolled ? 'text-gray-800' : 'text-white';
+  const projectTextColor = isScrolled ? 'text-gray-800' : 'text-white';
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-black/20 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/0963eef6-2db6-4dc0-ae62-fa3ee5cb272c.png" 
-                alt="Biker Detailing Logo - Detallado profesional de motocicletas" 
-                className={`h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 ${
-                  isScrolled 
-                    ? 'filter-none' 
-                    : 'filter brightness-110 contrast-110'
-                }`}
-              />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className={`font-bold text-xl lg:text-2xl ${logoTextColor} transition-colors duration-300`}>
-                Biker Detailing
+              <h1 className="font-bold text-xl lg:text-2xl transition-colors duration-300">
+                <span className={`${projectTextColor}`}>Project</span>
+                <span className="text-red-500 ml-2 text-2xl lg:text-3xl">D</span>
               </h1>
             </div>
           </div>
