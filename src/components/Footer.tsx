@@ -9,10 +9,13 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               
-              <div>
-                <h3 className="text-xl font-bold">LeanCars</h3>
-                
-              </div>
+          <div className="flex items-center cursor-pointer">
+            <img 
+              src="/lovable-uploads/logo.svg" 
+              alt="project D logo" 
+              className="h-24 w-24 lg:h-40 lg:w-40 object-contain hover:scale-105 transition-transform duration-200"
+            />
+          </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Especialistas en car detailing premium. 

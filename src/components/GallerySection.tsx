@@ -6,28 +6,28 @@ const GallerySection = () => {
 
   const galleryItems = [
     {
-      before: '/lovable-uploads/c29b6a2c-b3e5-40a4-8f42-ac7731cb416e.png',
-      after: '/lovable-uploads/162c40ce-2b22-4327-9dc4-32d07d352d7e.png',
-      title: 'Detailing Interior Alfa Romeo',
+      before: '/lovable-uploads/antes1.jpeg',
+      after: '/lovable-uploads/despues1.jpeg',
+      title: 'Interior',
       service: 'Limpieza Profunda + Acondicionamiento'
     },
     {
-      before: '/lovable-uploads/3ae9cb9b-c524-45e3-9f2d-23dc5342cb4c.png',
-      after: '/lovable-uploads/0b8e6a58-97a7-4faf-b08d-145b176ca126.png',
+      before: '/lovable-uploads/antes2.jpeg',
+      after: '/lovable-uploads/despues2.jpeg',
       title: 'Pulido de Faros Profesional',
       service: 'Restauración + Protección UV'
     },
     {
-      before: '/lovable-uploads/a3110208-cdf4-47e1-8636-91506b11e4fc.png',
-      after: '/lovable-uploads/d9c595b3-fe94-427a-b456-19d29233d409.png',
-      title: 'Restauración Sistema de Frenos',
-      service: 'Limpieza + Pintura + Protección'
+      before: '/lovable-uploads/antes3.jpeg',
+      after: '/lovable-uploads/despues3.jpeg',
+      title: 'Lavado Motor',
+      service: 'Limpieza + Vapor + Protección'
     },
     {
-      before: '/lovable-uploads/e115b780-9bf3-42dc-a809-be9861d90858.png',
-      after: '/lovable-uploads/443218b2-6ff0-42c7-87e4-5de93e81623c.png',
-      title: 'Restauración de Llantas Volkswagen',
-      service: 'Limpieza + Pulido + Protección'
+      before: '/lovable-uploads/antes4.jpeg',
+      after: '/lovable-uploads/despues4.jpeg',
+      title: 'Tapizado de Asientos',
+      service: 'Limpieza + Protección'
     }
   ];
 

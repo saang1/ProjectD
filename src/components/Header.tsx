@@ -28,17 +28,16 @@ const Header = () => {
   const projectTextColor = isScrolled ? 'text-gray-800' : 'text-white';
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-black/20 backdrop-blur-sm'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/60 backdrop-blur-md shadow-lg' : 'bg-black/20 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="relative">
-              <h1 className="font-bold text-xl lg:text-2xl transition-colors duration-300">
-                <span className={`${projectTextColor}`}>Project</span>
-                <span className="text-red-500 ml-2 text-2xl lg:text-3xl">D</span>
-              </h1>
-            </div>
+          <div className="flex items-center cursor-pointer">
+            <img 
+              src="/lovable-uploads/logo.svg" 
+              alt="project D logo" 
+              className="h-24 w-24 lg:h-40 lg:w-40 object-contain hover:scale-105 transition-transform duration-200"
+            />
           </div>
 
           {/* Desktop Navigation */}

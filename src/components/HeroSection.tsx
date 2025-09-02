@@ -12,10 +12,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-16 sm:px-0 sm:py-0">
       {/* Background with subtle overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('/lovable-uploads/ccd71cd9-1c75-4e87-aea7-99ab0cf45a35.png')`
+        backgroundImage: `url('/lovable-uploads/hero.jpeg')`
       }}>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
