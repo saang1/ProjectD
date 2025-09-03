@@ -128,13 +128,7 @@ const ServicesSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   {/* Icono superpuesto */}
-                  <div className="absolute top-4 left-4">
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <IconComponent className={`w-6 h-6 ${service.color}`} />
-                    </div>
-                  </div>
+
                 </div>
 
                 <CardContent className="flex flex-col flex-1 p-6">
@@ -158,7 +152,7 @@ const ServicesSection = () => {
                     </ul>
                   </div>
                   <a
-                    href="https://wa.me/5491123456789?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20car%20detailing"
+                    href={`https://wa.me/5491136809256?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20${service.title}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-black text-white text-center rounded-lg font-medium hover:bg-gray-900 transition-colors py-3 mt-4"
@@ -178,7 +172,7 @@ const ServicesSection = () => {
               personalizados.
             </p>
             <a
-              href="https://wa.me/5491123456789?text=Hola%2C%20necesito%20un%20servicio%20personalizado"
+              href="https://wa.me/5491136809256?text=Hola%2C%20queria%20consultar%20por%20un%20servicio%20personalizado%20de%20detailing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors"

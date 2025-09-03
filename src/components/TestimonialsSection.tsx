@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
       text: 'El servicio de PPF es lo mejor que le pude hacer a mi auto nuevo. La protección es invisible y me da tranquilidad para el día a día. Muy profesionales en todo momento.'
     }
   ];
-  
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (
       <span key={index} className={`text-lg ${index < rating ? 'text-yellow-500' : 'text-gray-300'}`}>
@@ -30,11 +30,11 @@ const TestimonialsSection = () => {
       </span>
     ));
   };
-  
+
   const getInitials = (name: string) => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
   };
-  
+
   return (
     <section id="testimonios" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,11 +53,11 @@ const TestimonialsSection = () => {
               <div className="flex items-center mb-4 justify-center">
                 {renderStars(review.rating)}
               </div>
-              
+
               <blockquote className="text-gray-700 leading-relaxed mb-6 italic">
                 "{review.text}"
               </blockquote>
-              
+
               <div className="border-t border-gray-200 pt-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -89,10 +89,10 @@ const TestimonialsSection = () => {
               Experimentá la diferencia de un servicio premium de car detailing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/5401164790993?text=Hola%2C%20quiero%20agendar%20un%20turno%20para%20mi%20auto" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+              <a href="https://wa.me/5491136809256?text=Hola%2C%20quiero%20agendar%20un%20turno%20para%20un%20servicio%20de%20detailing" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Agendar Turno
               </a>
-              <a href="https://maps.app.goo.gl/E7tpbgHghBP62yz16" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
+              <a href="https://www.google.com/maps/place/Project+D/@-34.6087474,-58.5546328,16.75z/data=!4m8!3m7!1s0x95bcb749b08b0865:0xed851aa6e0acbd39!8m2!3d-34.6082832!4d-58.5528811!9m1!1b1!16s%2Fg%2F11t31bwn3w?authuser=0&hl=es&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
                 Dejanos una Review!
               </a>
             </div>

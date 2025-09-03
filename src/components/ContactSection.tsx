@@ -8,13 +8,14 @@ const ContactSection = () => {
     name: '',
     phone: '',
     email: '',
+    vehicle: '',
     service: '',
     message: ''
   });
 
   const services = [
     'Lustrado / lijado',
-    'Limpieza de interior', 
+    'Limpieza de interior',
     'Audio Car',
     'Luces Leds ',
     'Lavados Comunes y Vip',
@@ -24,22 +25,23 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const message = `Hola! Me llamo ${formData.name}
     
-📱 Teléfono: ${formData.phone}
-📧 Email: ${formData.email}
-🚗 Servicio de interés: ${formData.service}
+ Teléfono: ${formData.phone}
+ Email: ${formData.email}
+ Tipo de Vehiculo: ${formData.vehicle}
+ Servicio de interés: ${formData.service}
 
 Mensaje: ${formData.message}
 
 Enviado desde la web de Car Detailing.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/541167336300?text=${encodedMessage}`;
-    
+    const whatsappUrl = `https://wa.me/5491136809256?text=${encodedMessage}`;
+
     window.open(whatsappUrl, '_blank');
-    
+
     toast({
       title: "¡Consulta enviada!",
       description: "Te redirigimos a WhatsApp para completar tu consulta."
@@ -49,6 +51,7 @@ Enviado desde la web de Car Detailing.`;
       name: '',
       phone: '',
       email: '',
+      vehicle: '',
       service: '',
       message: ''
     });
@@ -77,7 +80,7 @@ Enviado desde la web de Car Detailing.`;
           {/* Formulario de Contacto */}
           <div className="bg-gray-900 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Envianos tu Consulta</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-gray-300 font-medium mb-2">
@@ -125,9 +128,26 @@ Enviado desde la web de Car Detailing.`;
 
               <div>
                 <label className="block text-gray-300 font-medium mb-2">
+                  Tipo de Vehículo
+                </label>
+                <select
+                  name="vehicle"
+                  value={formData.vehicle}
+                  onChange={handleChange}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-500"
+                >
+                  <option value="">Seleccionar tipo de vehículo...</option>
+                  <option value="moto">Moto</option>
+                  <option value="auto">Auto</option>
+                  <option value="camioneta">Camioneta</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-gray-300 font-medium mb-2">
                   Servicio de Interés
                 </label>
                 <select
+                  required
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
@@ -168,44 +188,35 @@ Enviado desde la web de Car Detailing.`;
             {/* Info de Contacto */}
             <div className="bg-gray-900 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="text-xl">🏢</div>
                   <div>
-                    <h4 className="text-white font-medium mb-1">Car Detailing</h4>
-                    <p className="text-gray-300">Calle Principal 123</p>
-                    <p className="text-gray-400">Tu Ciudad, Tu Provincia</p>
+                    <h4 className="text-white font-medium mb-1">ProjectD</h4>
+                    <p className="text-gray-300">Justo Jose de Urquiza 4300</p>
+                    <p className="text-gray-400">Caseros, Buenos Aires</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
                   <div className="text-xl">📱</div>
                   <div>
                     <h4 className="text-white font-medium mb-1">WhatsApp</h4>
-                    <a href="https://wa.me/541167336300" className="text-gray-300 hover:text-white transition-colors">
-                      +54 11 6733-6300
+                    <a href="https://wa.me/541136809256" className="text-gray-300 hover:text-white transition-colors">
+                      +54 11 3680-9256
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="text-xl">📧</div>
-                  <div>
-                    <h4 className="text-white font-medium mb-1">Email</h4>
-                    <a href="mailto:info@cardetailing.com" className="text-gray-300 hover:text-white transition-colors">
-                      info@cardetailing.com
-                    </a>
-                  </div>
-                </div>
-                
+
+
+
                 <div className="flex items-start space-x-3">
                   <div className="text-xl">🕒</div>
                   <div>
                     <h4 className="text-white font-medium mb-1">Horarios</h4>
                     <p className="text-gray-300">Lunes a Viernes: 9:00 - 18:00</p>
-                    <p className="text-gray-300">Sábados: 10:00 - 15:00</p>
-                    <p className="text-gray-400">Domingos cerrado</p>
+                    <p className="text-gray-400">Sabados y Domingos cerrado</p>
                   </div>
                 </div>
 
@@ -213,8 +224,8 @@ Enviado desde la web de Car Detailing.`;
                   <div className="text-xl">📸</div>
                   <div>
                     <h4 className="text-white font-medium mb-1">Instagram</h4>
-                    <a href="https://instagram.com/cardetailing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                      @cardetailing
+                    <a href="https://instagram.com/projectd_detailing" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                      @projectd_detailing
                     </a>
                   </div>
                 </div>
@@ -226,18 +237,18 @@ Enviado desde la web de Car Detailing.`;
               <h3 className="text-2xl font-bold text-white mb-6">Nuestra Ubicación</h3>
               <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2657944668447!2d-58.64765222456908!3d-34.653229859297836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7b1aa1f4f77%3A0x8b8b8b8b8b8b8b8b!2sCalle%20Principal%20123%2C%20Tu%20Ciudad!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.140486053563!2d-58.55463280229327!3d-34.60874737501295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb749b08b0865%3A0xed851aa6e0acbd39!2sProject%20D!5e0!3m2!1ses!2sar!4v1756934930677!5m2!1ses!2sar"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación Car Detailing"
+                  title="Ubicación ProjectD"
                 />
               </div>
               <p className="text-gray-400 mt-4">
-                Calle Principal 123, Tu Ciudad - Atendemos en nuestro local
+                Justo Jose de Urquiza 4300, Caseros - Atendemos en nuestro local
               </p>
             </div>
           </div>

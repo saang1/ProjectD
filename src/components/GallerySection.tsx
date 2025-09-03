@@ -39,14 +39,14 @@ const GallerySection = () => {
             Galería <span className="text-red-600">Antes y Después</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mirá la transformación que logramos en cada vehículo. 
+            Mirá la transformación que logramos en cada vehículo.
             Estos resultados hablan por sí solos de la calidad de nuestro trabajo.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {galleryItems.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="group cursor-pointer"
               onClick={() => setSelectedImage(index)}
@@ -55,8 +55,8 @@ const GallerySection = () => {
                 <div className="relative">
                   <div className="grid grid-cols-2 h-64">
                     <div className="relative overflow-hidden">
-                      <img 
-                        src={item.before} 
+                      <img
+                        src={item.before}
                         alt={`${item.title} - Antes`}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
@@ -66,8 +66,8 @@ const GallerySection = () => {
                       </div>
                     </div>
                     <div className="relative overflow-hidden">
-                      <img 
-                        src={item.after} 
+                      <img
+                        src={item.after}
                         alt={`${item.title} - Después`}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
@@ -78,7 +78,7 @@ const GallerySection = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 font-medium">{item.service}</p>
@@ -90,7 +90,7 @@ const GallerySection = () => {
 
         {/* Modal para imagen ampliada */}
         {selectedImage !== null && (
-          <div 
+          <div
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
@@ -98,8 +98,8 @@ const GallerySection = () => {
               <div className="bg-white rounded-lg overflow-hidden shadow-2xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                   <div className="relative">
-                    <img 
-                      src={galleryItems[selectedImage].before} 
+                    <img
+                      src={galleryItems[selectedImage].before}
                       alt="Antes"
                       className="w-full h-80 md:h-96 object-cover"
                     />
@@ -108,8 +108,8 @@ const GallerySection = () => {
                     </div>
                   </div>
                   <div className="relative">
-                    <img 
-                      src={galleryItems[selectedImage].after} 
+                    <img
+                      src={galleryItems[selectedImage].after}
                       alt="Después"
                       className="w-full h-80 md:h-96 object-cover"
                     />
@@ -132,10 +132,11 @@ const GallerySection = () => {
         )}
 
         <div className="text-center mt-12">
-          <button 
+          <button
             className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-black transition-colors"
           >
-            Ver Más Trabajos
+            <a href="https://www.instagram.com/projectd_detailing/" target='_blank'>Ver Más Trabajos</a>
+
           </button>
         </div>
       </div>
