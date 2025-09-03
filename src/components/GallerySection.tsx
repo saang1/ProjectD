@@ -35,8 +35,8 @@ const GallerySection = () => {
     <section id="galeria" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-            Galería <span className="text-gray-600">Antes y Después</span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-black">
+            Galería <span className="text-red-600">Antes y Después</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Mirá la transformación que logramos en cada vehículo. 
@@ -61,7 +61,7 @@ const GallerySection = () => {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/10"></div>
-                      <div className="absolute top-4 left-4 bg-gray-800 text-white px-3 py-1 rounded-md text-sm font-medium">
+                      <div className="absolute top-4 left-4 bg-black text-white px-3 py-1 rounded-md text-sm font-medium">
                         ANTES
                       </div>
                     </div>
@@ -72,7 +72,7 @@ const GallerySection = () => {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/10"></div>
-                      <div className="absolute top-4 right-4 bg-gray-600 text-white px-3 py-1 rounded-md text-sm font-medium">
+                      <div className="absolute top-4 right-4 bg-red-700 text-white px-3 py-1 rounded-md text-sm font-medium">
                         DESPUÉS
                       </div>
                     </div>
@@ -103,7 +103,7 @@ const GallerySection = () => {
                       alt="Antes"
                       className="w-full h-80 md:h-96 object-cover"
                     />
-                    <div className="absolute top-4 left-4 bg-gray-800 text-white px-4 py-2 rounded-md font-medium">
+                    <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 rounded-md font-medium">
                       ANTES
                     </div>
                   </div>
@@ -113,7 +113,7 @@ const GallerySection = () => {
                       alt="Después"
                       className="w-full h-80 md:h-96 object-cover"
                     />
-                    <div className="absolute top-4 right-4 bg-gray-600 text-white px-4 py-2 rounded-md font-medium">
+                    <div className="absolute top-4 right-4 bg-red-700 text-white px-4 py-2 rounded-md font-medium">
                       DESPUÉS
                     </div>
                   </div>
@@ -133,7 +133,7 @@ const GallerySection = () => {
 
         <div className="text-center mt-12">
           <button 
-            className="inline-flex items-center bg-gray-800 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+            className="inline-flex items-center bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-black transition-colors"
           >
             Ver Más Trabajos
           </button>

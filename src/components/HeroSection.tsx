@@ -12,10 +12,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-16 sm:px-0 sm:py-0">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-24 sm:px-0 sm:py-0">
       {/* Background with subtle overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('/lovable-uploads/hero.jpeg')`
+        backgroundImage: `url('/lovable-uploads/hero.jpg')`
       }}>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
@@ -24,9 +24,9 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Clean, professional title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-automove">
             <span className="block text-white mb-2">Servicio Profesional</span>
-            <span className="block text-gray-300">de Car Detailing</span>
+            <span className="block text-red-600">de Car Detailing</span>
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">

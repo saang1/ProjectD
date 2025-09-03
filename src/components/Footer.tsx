@@ -2,7 +2,7 @@ import React from 'react';
 import { Car } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-950 text-white py-12 border-t border-gray-800">
+  return <footer className="bg-black text-white py-12 border-t border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo y Descripción */}
@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} LeanCars. Todos los derechos reservados.
+              © {currentYear} <span className="text-white font-automove">Project</span><span className="text-red-700 font-automove">D</span>. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">

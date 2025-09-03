@@ -93,7 +93,23 @@
     @apply bg-gray-50 text-gray-900;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
+  
+  h2 {
+    font-family: 'Automove', sans-serif;
+  }
 }
+
+@layer components {
+
+  .font-automove {
+    font-family: 'automove', sans-serif;
+  }
+}
+
+@font-face {
+    font-family: "automove";
+    src: url("./../public/fonts/Automove.ttf") format("truetype");
+  }
 
 @layer utilities {
   .text-gradient {

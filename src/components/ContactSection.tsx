@@ -13,12 +13,12 @@ const ContactSection = () => {
   });
 
   const services = [
-    'Tratamientos Sonax certificado',
+    'Lustrado / lijado',
     'Limpieza de interior', 
-    'Service de pintura/Pulidos',
-    'Restauración de ópticas',
-    'Sacabollos',
-    'Ploteos',
+    'Audio Car',
+    'Luces Leds ',
+    'Lavados Comunes y Vip',
+    'Lavado de motor',
     'Consulta Personalizada'
   ];
 
@@ -62,10 +62,10 @@ Enviado desde la web de Car Detailing.`;
   };
 
   return (
-    <section id="contacto" className="py-20 bg-gray-900">
+    <section id="contacto" className="py-20 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 lg:text-5xl text-white">
+          <h2 className="text-4xl font-bold mb-4 lg:text-5xl text-red-700">
             Contacto y Ubicación
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -75,7 +75,7 @@ Enviado desde la web de Car Detailing.`;
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Formulario de Contacto */}
-          <div className="bg-gray-800 rounded-lg p-8">
+          <div className="bg-gray-900 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Envianos tu Consulta</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -166,7 +166,7 @@ Enviado desde la web de Car Detailing.`;
           {/* Información de Contacto y Mapa */}
           <div className="space-y-8">
             {/* Info de Contacto */}
-            <div className="bg-gray-800 rounded-lg p-8">
+            <div className="bg-gray-900 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Información de Contacto</h3>
               
               <div className="space-y-4">
@@ -222,7 +222,7 @@ Enviado desde la web de Car Detailing.`;
             </div>
 
             {/* Mapa */}
-            <div className="bg-gray-800 rounded-lg p-8">
+            <div className="bg-gray-900 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Nuestra Ubicación</h3>
               <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden">
                 <iframe

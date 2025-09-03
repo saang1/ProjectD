@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
     <section id="testimonios" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-red-700">
             Testimonios de Clientes
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center">
-          <div className="bg-gray-800 rounded-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-black rounded-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               ¿Querés ser el próximo en dejar tu testimonio?
             </h3>
@@ -93,7 +93,7 @@ const TestimonialsSection = () => {
                 Agendar Turno
               </a>
               <a href="https://maps.app.goo.gl/E7tpbgHghBP62yz16" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
-                Ver Más Reviews
+                Dejanos una Review!
               </a>
             </div>
           </div>

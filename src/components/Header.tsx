@@ -42,19 +42,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('inicio')} className={`font-medium hover:text-gray-600 transition-colors ${textColorClass}`}>
+            <button onClick={() => scrollToSection('inicio')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Inicio
             </button>
-            <button onClick={() => scrollToSection('servicios')} className={`font-medium hover:text-gray-600 transition-colors ${textColorClass}`}>
+            <button onClick={() => scrollToSection('servicios')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Servicios
             </button>
-            <button onClick={() => scrollToSection('galeria')} className={`font-medium hover:text-gray-600 transition-colors ${textColorClass}`}>
+            <button onClick={() => scrollToSection('galeria')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Galería
             </button>
-            <button onClick={() => scrollToSection('testimonios')} className={`font-medium hover:text-gray-600 transition-colors ${textColorClass}`}>
+            <button onClick={() => scrollToSection('testimonios')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Testimonios
             </button>
-            <button onClick={() => scrollToSection('contacto')} className="bg-gray-800 text-white px-6 py-2.5 rounded-lg hover:bg-gray-700 transition-colors font-medium">
+            <button onClick={() => scrollToSection('contacto')} className="bg-red-700 text-white px-6 py-2.5 rounded-lg hover:bg-red-900 transition-colors font-medium">
               Contacto
             </button>
           </nav>
@@ -85,7 +85,7 @@ const Header = () => {
               <button onClick={() => scrollToSection('testimonios')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Testimonios
               </button>
-              <button onClick={() => scrollToSection('contacto')} className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors text-center mt-2 font-medium">
+              <button onClick={() => scrollToSection('contacto')} className="bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-900 transition-colors text-center mt-2 font-medium">
                 Contacto
               </button>
             </nav>
