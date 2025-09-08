@@ -125,15 +125,15 @@ const Header = () => {
                       <ChevronDown className="h-4 w-4" />
                     </button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-lg z-[70] min-w-[200px] ml-4">
-                    <DropdownMenuItem onClick={() => navigateToSection('servicios')} className="cursor-pointer hover:bg-gray-100 px-4 py-2">
+                  <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-lg z-[70] w-full max-w-sm mx-auto">
+                    <DropdownMenuItem onClick={() => navigateToSection('servicios')} className="cursor-pointer hover:bg-gray-100 px-6 py-4 text-base">
                       Ver todos los servicios
                     </DropdownMenuItem>
                     {servicesData.map((service) => (
                       <DropdownMenuItem 
                         key={service.slug}
                         onClick={() => navigate(`/servicio/${service.slug}`)}
-                        className="cursor-pointer hover:bg-gray-100 px-4 py-2"
+                        className="cursor-pointer hover:bg-gray-100 px-6 py-4 text-base"
                       >
                         {service.title}
                       </DropdownMenuItem>
