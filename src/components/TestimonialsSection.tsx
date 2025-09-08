@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
               <a href="https://wa.me/5491136809256?text=Hola%2C%20quiero%20agendar%20un%20turno%20para%20un%20servicio%20de%20detailing" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Agendar Turno
               </a>
-              <a href="https://www.google.com/maps/place/Project+D/@-34.6087474,-58.5546328,16.75z/data=!4m8!3m7!1s0x95bcb749b08b0865:0xed851aa6e0acbd39!8m2!3d-34.6082832!4d-58.5528811!9m1!1b1!16s%2Fg%2F11t31bwn3w?authuser=0&hl=es&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
+              <a href="https://search.google.com/local/writereview?placeid=ChIJZQiLsEm3vJUROb2s4KYahe0" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
                 Dejanos una Review!
               </a>
             </div>
