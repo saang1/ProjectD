@@ -1,100 +1,9 @@
 import React from "react";
-import { Car, Wrench, PaintBucket, Eye, Hammer, Palette } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "./ui/card";
+import { servicesData } from "@/data/servicesData";
 
 const ServicesSection = () => {
-  const services = [
-    {
-      title: "Lustrado/Lijado",
-      description:
-        "Corrección profesional de pintura que elimina rayones, remolinos y opacidad, restaurando el brillo original de tu vehículo.",
-      features: [
-        "Eliminación de micro rayones y remolinos",
-        "Restauración del brillo original",
-        "Corrección de opacidad y marcas de lavado",
-        "Preparación para encerado y protección",
-      ],
-      icon: Car,
-      image: "/lovable-uploads/pulido2.jpg",
-      imageAlt: "Tratamiento Sonax",
-      color: "text-red-600",
-    },
-    {
-      title: "Limpieza de Interior",
-      description:
-        "Limpieza profunda y detallada del interior de tu vehículo, tapizados, cueros y plásticos.",
-      features: [
-        "Aspirado completo",
-        "Limpieza de tapizados",
-        "Acondicionamiento de cueros",
-        "Desinfección",
-      ],
-      icon: Wrench,
-      image: "/lovable-uploads/aspirando.jpg",
-      imageAlt: "Limpieza Interior",
-      color: "text-blue-600",
-    },
-    {
-      title: "Audio Car",
-      description:
-        "Instalación y configuración de sistemas de sonido automotriz, equipos multimedia y accesorios electrónicos para tu vehículo.",
-      features: [
-        "Equipos de alta calidad y marcas reconocidas",
-        "Instalación profesional certificada",
-        "Configuración personalizada según vehículo",
-        "Garantía en instalación y equipos",
-      ],
-      icon: PaintBucket,
-      image: "/lovable-uploads/audio-car.jpg",
-      imageAlt: "Pulido de pintura",
-      color: "text-yellow-500",
-    },
-    {
-      title: "Luces Leds",
-      description:
-        "Instalación de luces LED automotrices para interior y exterior, mejorando la iluminación y estética de tu vehículo.",
-      features: [
-        "Tecnología LED de última generación",
-        "Instalación sin modificar cableado original",
-        "Mayor durabilidad y bajo consumo",
-        "Mejora significativa en visibilidad",
-      ],
-      icon: Eye,
-      image: "/lovable-uploads/antes4.jpeg",
-      imageAlt: "Restauración de ópticas",
-      color: "text-amber-600",
-    },
-    {
-      title: "Lavados Comunes y Vip",
-      description:
-        "Servicios de lavado exterior e interior con diferentes niveles de calidad, desde básico hasta premium con tratamientos especializados.",
-      features: [
-        "Productos de limpieza especializados",
-        "Técnicas de lavado sin contacto",
-        "Atención personalizada según nivel",
-        "Protección de superficies delicadas",
-      ],
-      icon: Hammer,
-      image: "/lovable-uploads/lavado.jpg",
-      imageAlt: "Sacabollos",
-      color: "text-green-600",
-    },
-    {
-      title: "Lavado de motor",
-      description:
-        "Limpieza y desengrasado del motor de tu vehículo, mejorando su apariencia y funcionamiento.",
-      features: [
-        "Desengrasado",
-        "Limpieza a fondo",
-        "Protección de componentes",
-        "Mejora de rendimiento",
-      ],
-      icon: Palette,
-      image: "/lovable-uploads/lavado-motor.jpg",
-      imageAlt: "Ploteos",
-      color: "text-purple-600",
-    },
-  ];
 
   return (
     <section id="servicios" className="py-20 bg-gray-50">
@@ -110,7 +19,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
+          {servicesData.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <Card
@@ -151,14 +60,22 @@ const ServicesSection = () => {
                       ))}
                     </ul>
                   </div>
-                  <a
-                    href={`https://wa.me/5491136809256?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20${service.title}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-black text-white text-center rounded-lg font-medium hover:bg-gray-900 transition-colors py-3 mt-4"
-                  >
-                    Consultar Precio
-                  </a>
+                  <div className="flex gap-2 mt-4">
+                    <Link
+                      to={`/servicio/${service.slug}`}
+                      className="flex-1 bg-gray-100 text-gray-800 text-center rounded-lg font-medium hover:bg-gray-200 transition-colors py-3"
+                    >
+                      Ver más
+                    </Link>
+                    <a
+                      href={`https://wa.me/5491136809256?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20${service.title}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-black text-white text-center rounded-lg font-medium hover:bg-gray-900 transition-colors py-3"
+                    >
+                      Consultar Precio
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             );
