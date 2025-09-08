@@ -13,6 +13,7 @@ import { servicesData } from '@/data/servicesData';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -117,29 +118,40 @@ const Header = () => {
               <button onClick={() => navigateToSection('inicio')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Inicio
               </button>
-              <div className="relative">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium flex items-center justify-between w-full">
-                      Servicios
-                      <ChevronDown className="h-4 w-4" />
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-lg z-[70] w-full max-w-sm mx-auto">
-                    <DropdownMenuItem onClick={() => navigateToSection('servicios')} className="cursor-pointer hover:bg-gray-100 px-6 py-4 text-base">
+              <div>
+                <button 
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="w-full text-gray-700 hover:text-gray-900 transition-colors duration-200 text-left py-3 font-medium hover:bg-gray-100 rounded-lg px-3 flex items-center justify-between"
+                >
+                  Servicios
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isMobileServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-red-700 pl-4">
+                    <button 
+                      onClick={() => {
+                        navigateToSection('servicios');
+                        setIsMobileServicesOpen(false);
+                      }}
+                      className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors duration-200 py-3 text-base font-semibold hover:bg-gray-100 rounded px-3"
+                    >
                       Ver todos los servicios
-                    </DropdownMenuItem>
+                    </button>
                     {servicesData.map((service) => (
-                      <DropdownMenuItem 
+                      <button
                         key={service.slug}
-                        onClick={() => navigate(`/servicio/${service.slug}`)}
-                        className="cursor-pointer hover:bg-gray-100 px-6 py-4 text-base"
+                        onClick={() => {
+                          navigate(`/servicio/${service.slug}`);
+                          setIsMobileServicesOpen(false);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="block w-full text-left text-gray-700 hover:text-gray-900 transition-colors duration-200 py-3 text-base hover:bg-gray-100 rounded px-3"
                       >
-                        {service.title}
-                      </DropdownMenuItem>
+                        <div className="font-medium">{service.title}</div>
+                      </button>
                     ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  </div>
+                )}
               </div>
               <button onClick={() => navigateToSection('galeria')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Galería
