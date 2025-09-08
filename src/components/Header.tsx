@@ -1,6 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { servicesData } from '@/data/servicesData';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,9 +67,28 @@ const Header = () => {
             <button onClick={() => navigateToSection('inicio')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Inicio
             </button>
-            <button onClick={() => navigateToSection('servicios')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
-              Servicios
-            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className={`font-medium hover:text-red-600 transition-colors flex items-center gap-1 ${textColorClass}`}>
+                  Servicios
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-lg z-[60] min-w-[200px]">
+                <DropdownMenuItem onClick={() => navigateToSection('servicios')} className="cursor-pointer hover:bg-gray-100 px-4 py-2">
+                  Ver todos los servicios
+                </DropdownMenuItem>
+                {servicesData.map((service) => (
+                  <DropdownMenuItem 
+                    key={service.slug}
+                    onClick={() => navigate(`/servicio/${service.slug}`)}
+                    className="cursor-pointer hover:bg-gray-100 px-4 py-2"
+                  >
+                    {service.title}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <button onClick={() => navigateToSection('galeria')} className={`font-medium hover:text-red-600 transition-colors ${textColorClass}`}>
               Galería
             </button>
@@ -90,9 +117,30 @@ const Header = () => {
               <button onClick={() => navigateToSection('inicio')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Inicio
               </button>
-              <button onClick={() => navigateToSection('servicios')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
-                Servicios
-              </button>
+              <div className="relative">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium flex items-center justify-between w-full">
+                      Servicios
+                      <ChevronDown className="h-4 w-4" />
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-lg z-[70] min-w-[200px] ml-4">
+                    <DropdownMenuItem onClick={() => navigateToSection('servicios')} className="cursor-pointer hover:bg-gray-100 px-4 py-2">
+                      Ver todos los servicios
+                    </DropdownMenuItem>
+                    {servicesData.map((service) => (
+                      <DropdownMenuItem 
+                        key={service.slug}
+                        onClick={() => navigate(`/servicio/${service.slug}`)}
+                        className="cursor-pointer hover:bg-gray-100 px-4 py-2"
+                      >
+                        {service.title}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
               <button onClick={() => navigateToSection('galeria')} className="text-gray-700 hover:text-gray-900 transition-colors text-left py-3 font-medium">
                 Galería
               </button>
