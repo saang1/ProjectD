@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Shield, Star } from 'lucide-react';
 import Header from '@/components/Header';
@@ -10,6 +10,11 @@ import { servicesData } from '@/data/servicesData';
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = servicesData.find(s => s.slug === slug);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!service) {
     return (
