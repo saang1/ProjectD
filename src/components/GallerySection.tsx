@@ -24,8 +24,8 @@ const GallerySection = () => {
       service: 'Limpieza + Vapor + Protección'
     },
     {
-      before: '/lovable-uploads/antes4.jpg',
-      after: '/lovable-uploads/despues4.webp',
+      before: '/lovable-uploads/antes4.jpeg',
+      after: '/lovable-uploads/despues4.jpeg',
       title: 'Tapizado de Asientos',
       service: 'Limpieza + Protección'
     }
