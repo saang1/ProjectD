@@ -60,7 +60,7 @@ export const servicesData: Service[] = [
       }
     ],
     icon: Car,
-    image: "/lovable-uploads/pulido2.jpg",
+    image: "/lovable-uploads/pulido.webp",
     imageAlt: "Tratamiento Sonax",
     color: "text-red-600",
   },
@@ -201,7 +201,7 @@ export const servicesData: Service[] = [
       }
     ],
     icon: Eye,
-    image: "/lovable-uploads/antes4.jpeg",
+    image: "/lovable-uploads/optica-led.jpg",
     imageAlt: "Luces LED",
     color: "text-amber-600",
   },

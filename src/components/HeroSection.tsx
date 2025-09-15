@@ -15,7 +15,7 @@ const HeroSection = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-24 sm:px-0 sm:py-0">
       {/* Background with subtle overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('/lovable-uploads/hero.jpg')`
+        backgroundImage: `url('/lovable-uploads/hero.jpeg')`
       }}>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>

@@ -6,26 +6,26 @@ const GallerySection = () => {
 
   const galleryItems = [
     {
-      before: '/lovable-uploads/antes1.jpeg',
-      after: '/lovable-uploads/despues1.jpeg',
+      before: '/lovable-uploads/antes1.jpg',
+      after: '/lovable-uploads/despues1.jpg',
       title: 'Interior',
       service: 'Limpieza Profunda + Acondicionamiento'
     },
     {
-      before: '/lovable-uploads/antes2.jpeg',
-      after: '/lovable-uploads/despues2.jpeg',
+      before: '/lovable-uploads/antes2.jpg',
+      after: '/lovable-uploads/despues2.jpg',
       title: 'Pulido de Faros Profesional',
       service: 'Restauración + Protección UV'
     },
     {
-      before: '/lovable-uploads/antes3.jpeg',
-      after: '/lovable-uploads/despues3.jpeg',
+      before: '/lovable-uploads/antes3.jpg',
+      after: '/lovable-uploads/despues3.jpg',
       title: 'Lavado Motor',
       service: 'Limpieza + Vapor + Protección'
     },
     {
-      before: '/lovable-uploads/antes4.jpeg',
-      after: '/lovable-uploads/despues4.jpeg',
+      before: '/lovable-uploads/antes4.jpg',
+      after: '/lovable-uploads/despues4.webp',
       title: 'Tapizado de Asientos',
       service: 'Limpieza + Protección'
     }

@@ -10,11 +10,7 @@ const Footer = () => {
           <div className="flex items-center space-x-3 mb-4">
 
             <div className="flex items-center cursor-pointer">
-              <img
-                src="/lovable-uploads/logo.svg"
-                alt="project D logo"
-                className="h-24 w-24 lg:h-40 lg:w-40 object-contain hover:scale-105 transition-transform duration-200"
-              />
+                <span className="text-white font-automove">Project</span><span className="text-red-700 font-automove">D</span>
             </div>
           </div>
           <p className="text-gray-300 mb-6 max-w-md">
