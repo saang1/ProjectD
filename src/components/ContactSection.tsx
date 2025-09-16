@@ -194,7 +194,7 @@ Enviado desde la web de Car Detailing.`;
                   <div className="text-xl">🏢</div>
                   <div>
                     <h4 className="text-white font-medium mb-1">ProjectD</h4>
-                    <p className="text-gray-300">Justo Jose de Urquiza 4300</p>
+                    <p className="text-gray-300">Justo Jose de Urquiza 4132</p>
                     <p className="text-gray-400">Caseros, Buenos Aires</p>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ Enviado desde la web de Car Detailing.`;
                 />
               </div>
               <p className="text-gray-400 mt-4">
-                Justo Jose de Urquiza 4300, Caseros - Atendemos en nuestro local
+                Justo Jose de Urquiza 4132, Caseros - Atendemos en nuestro local
               </p>
             </div>
           </div>
