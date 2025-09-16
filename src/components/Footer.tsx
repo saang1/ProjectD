@@ -108,7 +108,7 @@ const Footer = () => {
               <span className="text-blue-400">📱</span> 54 11 3680-9256
             </li>
             <li className="text-gray-300">
-              <span className="text-blue-400">📍</span> Justo Jose de Urquiza 4300, Caseros
+              <span className="text-blue-400">📍</span> Justo Jose de Urquiza 4132, Caseros
             </li>
             <li className="text-gray-300">
               <span className="text-blue-400">🕒</span> Lun-Vie: 9:00-18:00
