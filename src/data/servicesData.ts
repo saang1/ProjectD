@@ -24,10 +24,9 @@ export const servicesData: Service[] = [
     description: "Corrección profesional de pintura que elimina rayones, remolinos y opacidad, restaurando el brillo original de tu vehículo.",
     detailedDescription: "Nuestro servicio de lustrado y lijado es un proceso técnico especializado que corrige imperfecciones de la pintura automotriz. Utilizamos productos de alta gama y técnicas profesionales para eliminar micro rayones, remolinos causados por lavados incorrectos, y opacidad generada por el tiempo y la exposición a los elementos.",
     features: [
-      "Eliminación de micro rayones y remolinos",
-      "Restauración del brillo original",
-      "Corrección de opacidad y marcas de lavado",
-      "Preparación para encerado y protección",
+      "Abrillantados",
+      "Acrilicos",
+      "Ceramicos",
     ],
     process: [
       "Inspección detallada de la pintura con luz LED",
@@ -40,23 +39,23 @@ export const servicesData: Service[] = [
     ],
     duration: "4-8 horas",
     warranty: "6 meses en condiciones normales de uso",
-    price: "Desde $80.000",
+    price: "$80.000 por panel",
     faq: [
       {
         question: "¿Cuándo necesita mi auto este servicio?",
         answer: "Cuando notes rayones superficiales, falta de brillo, o marcas circulares (remolinos) en la pintura. También si la superficie se siente áspera al tacto."
       },
       {
-        question: "¿Se puede hacer en cualquier color de auto?",
-        answer: "Sí, trabajamos con todos los colores, aunque los colores oscuros requieren mayor cuidado por ser más susceptibles a mostrar imperfecciones."
+        question: "¿Cuando mi auto necesita un tratamiento cerámico?",
+        answer: "El tratamiento cerámico es ideal si buscas una protección duradera contra rayones, químicos y condiciones climáticas extremas, además de facilitar la limpieza y mantener el brillo por más tiempo."
       },
       {
-        question: "¿Cuánto dura el resultado?",
-        answer: "Con cuidado adecuado, el resultado puede durar entre 6 meses a 2 años, dependiendo del mantenimiento y condiciones de uso."
+        question: "¿Cuando mi auto necesita un tratamiento acrilico?",
+        answer: "El tratamiento acrílico es una opción intermedia que ofrece buena protección y brillo, ideal para vehículos que no están expuestos a condiciones extremas pero que aún requieren un cuidado adicional."
       },
       {
-        question: "¿Qué cuidados debo tener después?",
-        answer: "Evitar lavaderos automáticos, usar técnicas de lavado seguras, y aplicar cera cada 3-4 meses para mantener la protección."
+        question: "¿Cuando mi auto necesita un abrillantado?",
+        answer: "El abrillantado es adecuado para vehículos con desgaste leve a moderado, donde se busca restaurar el brillo y eliminar pequeñas imperfecciones sin necesidad de un lijado profundo."
       }
     ],
     icon: Car,
@@ -87,7 +86,7 @@ export const servicesData: Service[] = [
     ],
     duration: "2-4 horas",
     warranty: "30 días contra reaparición de manchas tratadas",
-    price: "Desde $35.000",
+    price: "Desde $150.000",
     faq: [
       {
         question: "¿Qué tipo de manchas pueden quitar?",
@@ -134,7 +133,7 @@ export const servicesData: Service[] = [
     ],
     duration: "1-3 días según complejidad",
     warranty: "1 año en instalación, garantía de fábrica en equipos",
-    price: "Desde $150.000",
+    price: "A convenir",
     faq: [
       {
         question: "¿Qué marcas de equipos manejan?",
@@ -181,7 +180,7 @@ export const servicesData: Service[] = [
     ],
     duration: "1-3 horas",
     warranty: "2 años en LEDs, 6 meses en instalación",
-    price: "Desde $25.000",
+    price: "A convenir",
     faq: [
       {
         question: "¿Los LEDs duran más que las lámparas comunes?",
@@ -228,7 +227,7 @@ export const servicesData: Service[] = [
     ],
     duration: "30min-2 horas según tipo",
     warranty: "Satisfacción garantizada",
-    price: "Común: $8.000 | VIP: $18.000",
+    price: "Común: $30.000 | VIP: $80.000",
     faq: [
       {
         question: "¿Cuál es la diferencia entre común y VIP?",
@@ -248,7 +247,7 @@ export const servicesData: Service[] = [
       }
     ],
     icon: Hammer,
-    image: "/lovable-uploads/lavado.jpg",
+    image: "/lovable-uploads/lavado.png",
     imageAlt: "Lavados",
     color: "text-green-600",
   },
@@ -275,7 +274,7 @@ export const servicesData: Service[] = [
     ],
     duration: "45min-1.5 horas",
     warranty: "30 días contra defectos en el proceso",
-    price: "Desde $15.000",
+    price: "$60.000",
     faq: [
       {
         question: "¿Es seguro lavar el motor con agua?",
@@ -298,5 +297,146 @@ export const servicesData: Service[] = [
     image: "/lovable-uploads/lavado-motor.jpg",
     imageAlt: "Lavado de Motor",
     color: "text-purple-600",
+  },
+  {
+    title: "Pulido de óptica",
+    slug: "pulido-optica",
+    description: "Restauración y pulido profesional de ópticas para mejorar la visibilidad y estética.",
+    detailedDescription: "El pulido de ópticas elimina el amarillamiento, rayas y opacidad de los faros, devolviendo transparencia y brillo. Utilizamos productos y herramientas específicas para garantizar resultados duraderos.",
+    features: [
+      "Eliminación de opacidad",
+      "Recuperación de brillo",
+      "Protección UV",
+    ],
+    process: [
+      "Limpieza y desengrasado de ópticas",
+      "Lijado progresivo según estado",
+      "Pulido con compuestos especiales",
+      "Aplicación de sellador protector UV"
+    ],
+    duration: "1-2 horas",
+    warranty: "6 meses contra opacidad",
+    price: "$60.000 por par",
+    faq: [
+      {
+        question: "¿Sirve para cualquier tipo de óptica?",
+        answer: "Sí, trabajamos con ópticas plásticas y acrílicas de autos y motos."
+      },
+      {
+        question: "¿Cuánto dura el resultado?",
+        answer: "Con el cuidado adecuado, el resultado puede durar más de un año."
+      }
+    ],
+    icon: Eye,
+    image: "/lovable-uploads/pulido-optica.jpg",
+    imageAlt: "Pulido de óptica",
+    color: "text-cyan-600",
+  },
+  {
+    title: "Reparación de equipos",
+    slug: "reparacion-equipos",
+    description: "Diagnóstico y reparación de equipos electrónicos automotrices: audio, alarmas, sensores y más.",
+    detailedDescription: "Solucionamos fallas en equipos electrónicos de tu vehículo, desde sistemas de audio hasta potencias y alarmas. Servicio profesional y diagnóstico preciso.",
+    features: [
+      "Diagnóstico profesional",
+      "Repuestos originales",
+      "Garantía en reparación",
+    ],
+    process: [
+      "Evaluación y diagnóstico del equipo",
+      "Presupuesto detallado",
+      "Reparación y prueba de funcionamiento",
+      "Entrega con garantía"
+    ],
+    duration: "7 días según equipo",
+    warranty: "3 meses en reparación",
+    price: "A convenir",
+    faq: [
+      {
+        question: "¿Reparan cualquier marca?",
+        answer: "Sí, trabajamos con todas las marcas y modelos."
+      },
+      {
+        question: "¿Cuánto tiempo tarda el diagnóstico?",
+        answer: "Entre 5 y 7 días según el equipo."
+      }
+    ],
+    icon: Wrench,
+    image: "/lovable-uploads/reparacion-equipos.jpg",
+    imageAlt: "Reparación de equipos",
+    color: "text-orange-600",
+  },
+  {
+    title: "Polarizado",
+    slug: "polarizado",
+    description: "Instalación de láminas polarizadas para vidrios, mejorando privacidad y protección solar.",
+    detailedDescription: "Ofrecemos polarizado profesional para autos y camionetas, con láminas homologadas y garantía. Mejora la estética, reduce el calor y protege el interior del vehículo.",
+    features: [
+      "Láminas homologadas",
+      "Protección UV",
+      "Instalación sin burbujas",
+    ],
+    process: [
+      "Limpieza y preparación de vidrios",
+      "Corte y ajuste de láminas",
+      "Instalación profesional",
+      "Revisión y garantía"
+    ],
+    duration: "2-4 horas",
+    warranty: "1 año contra desprendimiento",
+    price: "A convenir",
+    faq: [
+      {
+        question: "¿Qué tonos ofrecen?",
+        answer: "Tenemos varios tonos y grados de polarizado, todos legales."
+      },
+      {
+        question: "¿Cuánto tiempo tarda?",
+        answer: "Entre 2 y 4 horas según cantidad de vidrios."
+      }
+    ],
+    icon: Palette,
+    image: "/lovable-uploads/polarizado.jpg",
+    imageAlt: "Polarizado",
+    color: "text-teal-600",
+  },
+  {
+    title: "Tratamientos",
+    slug: "tratamientos",
+    description: "Elegí el tratamiento ideal para tu auto: abrillantado, acrílico o cerámico. Cada uno con procesos y beneficios específicos.",
+    detailedDescription: "Ofrecemos tres tipos de tratamientos para la pintura de tu vehículo, adaptados a diferentes necesidades y presupuestos. Mejorá el brillo, la protección y la durabilidad de la pintura con la opción que más te convenga.",
+    features: [
+      "Abrillantado: un solo paso 3 en 1, lavado básico, listo en el día (8 horas).",
+      "Acrílico: descontaminado, lavado, corrección media/alta según estado, 3 pasos de pulido.",
+      "Cerámico: igual que acrílico pero con sellador cerámico premium (a convenir)."
+    ],
+    process: [
+      "Evaluación del estado de la pintura.",
+      "Lavado y descontaminado según tratamiento.",
+      "Corrección y pulido (cantidad de pasos según tipo).",
+      "Aplicación de sellador (acrílico o cerámico).",
+      "Inspección final y entrega."
+    ],
+    duration: "Abrillantado: 8 horas | Acrílico: 1 día | Cerámico: 1-2 días",
+    warranty: "Abrillantado: 3 meses | Acrílico: 6 meses | Cerámico: 1 año",
+    price: "Abrillantado: $150.000 | Acrílico: $350.000 | Cerámico: $600.000",
+    faq: [
+      {
+        question: "¿Qué incluye el abrillantado?",
+        answer: "Incluye lavado básico y abrillantado de un solo paso con producto 3 en 1. El auto está listo en el día."
+      },
+      {
+        question: "¿En qué consiste el tratamiento acrílico?",
+        answer: "Descontaminado, lavado, corrección media/alta según estado y 3 pasos de pulido para máxima protección y brillo."
+      },
+      {
+        question: "¿Qué diferencia hay con el cerámico?",
+        answer: "El cerámico incluye el mismo proceso que el acrílico pero se finaliza con un sellador cerámico premium, que ofrece mayor durabilidad y protección."
+      }
+    ],
+    icon: PaintBucket,
+    image: "/lovable-uploads/tratamientos.jpg",
+    imageAlt: "Tratamientos de pintura",
+    color: "text-indigo-600",
   },
 ];

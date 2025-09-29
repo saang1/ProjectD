@@ -45,6 +45,10 @@ const ServicesSection = () => {
                     <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
+                    {/* Precio del servicio */}
+                    {service.price && (
+                      <p className="text-lg font-bold text-red-600">{service.price}</p>
+                    )}
                     <p className="text-muted-foreground leading-relaxed text-sm">
                       {service.description}
                     </p>

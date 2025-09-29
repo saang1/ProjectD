@@ -4,22 +4,19 @@ import React from 'react';
 const TestimonialsSection = () => {
   const featuredReviews = [
     {
-      author_name: 'Carlos Rodríguez',
+      author_name: 'Romina Fabre',
       rating: 5,
-      relative_time_description: 'hace 2 semanas',
-      text: 'Excelente servicio! Mi BMW quedó como nuevo después del coating cerámico. La atención es muy profesional y el resultado superó mis expectativas. Totalmente recomendable.'
+      text: 'Excelente servicio y buen precio. Es atendido por su dueño el cual es muy detallista y me asesoró en todo.'
     },
     {
-      author_name: 'María González',
+      author_name: 'Ariel Figueroa',
       rating: 5,
-      relative_time_description: 'hace 1 mes',
-      text: 'Increíble el trabajo que hicieron con mi Audi. El pulido eliminó todos los rayones y el auto brilla como el primer día. Definitivamente van a ser mi taller de confianza.'
+      text: 'Excelente lugar para dejar el auto, trabajan muy bien, muy meticulosos, le dieron brillo a mi auto, lo dejaron impecable. Recomendadisimos.'
     },
     {
-      author_name: 'Alejandro Fernández',
+      author_name: 'Matias Rezilo',
       rating: 5,
-      relative_time_description: 'hace 3 semanas',
-      text: 'El servicio de PPF es lo mejor que le pude hacer a mi auto nuevo. La protección es invisible y me da tranquilidad para el día a día. Muy profesionales en todo momento.'
+      text: 'Excelente servicio, tanto para lavados como para solucionar algún detalle estético del auto. Muy recomendable!'
     }
   ];
 
@@ -66,7 +63,6 @@ const TestimonialsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-gray-900 font-medium">{review.author_name}</h4>
-                      <p className="text-gray-500 text-sm">{review.relative_time_description}</p>
                     </div>
                   </div>
                   <div className="text-right">
