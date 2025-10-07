@@ -8,7 +8,7 @@ const GallerySection = () => {
     {
       before: '/lovable-uploads/antes1.jpg',
       after: '/lovable-uploads/despues1.jpg',
-      title: 'Interior',
+      title: 'Pulido Profesional',
       service: 'Lijado + Pulido'
     },
     {
